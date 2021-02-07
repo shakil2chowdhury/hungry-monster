@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungry Monster</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="searchList">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Hungry Monster</a>
+            </div>
+        </nav>
+
+        <div class="input-group item-center mx-auto mt-5" style="width: 500px;">
+            <input id="searchQuery" type="search" class="form-control rounded" placeholder="Search for meal..."
+                aria-label="Search" aria-describedby="search-addon" />
+            <button type="button" class="btn btn-primary" id="searchBtn" onclick="search()">Search</button>
+        </div>
+
+        <div id="notFound">
+            <h1>Results not found......</h1>
+        </div>
+
+        <div id="results">
+        </div>
+
+    </section>
+
+
+    <div id="mealDetails">
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
