@@ -1,5 +1,5 @@
 //function for getting response of data from themealdb
-function search() {
+const search = () => {
     document.getElementById('results').innerHTML = null;
     const searchQuery = document.getElementById('searchQuery').value;
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchQuery}`)
@@ -9,7 +9,7 @@ function search() {
 
 
 //checking the response of themealdb
-function resultChecker(datas) {
+const resultChecker = datas => {
     if (datas.meals == null) {
         document.getElementById('notFound').style.display = 'block';
     } else {
@@ -19,6 +19,8 @@ function resultChecker(datas) {
 
 //Displaying MealList Function
 const mealList = datas => {
+    document.getElementById('notFound').style.display = 'none';
+
     const results = document.getElementById('results');
     datas.meals.forEach(meal => {
         const result = document.createElement('div');
